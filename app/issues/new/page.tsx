@@ -1,5 +1,8 @@
+'use client'
 import React from 'react';
 import { Button } from '@radix-ui/themes';
+import SimpleMDE from "react-simplemde-editor";
+import "easymde/dist/easymde.min.css";
 
 const NewIssuesPage = () => {
   return (
@@ -12,9 +15,8 @@ const NewIssuesPage = () => {
         </div>
 
         {/* Fallback to textarea */}
-        <textarea
+        <SimpleMDE
           className="w-full p-3 border border-gray-300 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-          rows={5}
           placeholder="Enter issue description..."
         />
 
